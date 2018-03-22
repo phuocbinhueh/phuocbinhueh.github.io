@@ -18,28 +18,32 @@ ORDER: base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%; }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 80%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
+
+::selection {
+  background-color: #72ec9b;
+  color: white; }
 
 @keyframes moveInLeft {
   0% {
@@ -88,7 +92,7 @@ body {
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         font-size: 4rem;
         letter-spacing: 1rem; } }
@@ -98,7 +102,7 @@ body {
     font-weight: 600;
     letter-spacing: 1.5rem;
     animation: moveInRight 2s  ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         font-size: 1rem;
         letter-spacing: 1rem; } }
@@ -108,15 +112,15 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #77d666, #28b485);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 2.5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2.5rem;
       letter-spacing: 1px; } }
@@ -149,7 +153,7 @@ body {
 
 .margin-bottom-big {
   margin-bottom: 8rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .margin-bottom-big {
       margin-bottom: 6rem; } }
 
@@ -176,7 +180,7 @@ body {
   height: auto;
   z-index: -1;
   opacity: 0.3; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .bg-video__1 {
       visibility: hidden; } }
 
@@ -188,7 +192,7 @@ body {
   z-index: -1;
   opacity: 0.3;
   height: auto; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .bg-video__2 {
       visibility: hidden; } }
 
@@ -204,7 +208,7 @@ body {
   font-size: 1.6rem;
   border: none;
   cursor: pointer; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .btn, .btn:link, .btn:visited {
       margin-top: 3rem; } }
 
@@ -242,22 +246,22 @@ body {
   background-color: #fff; }
 
 .btn--green, .btn--green:link, .btn--green:visited {
-  background-color: #55c57a;
+  background-color: #72ec9b;
   color: #fff; }
 
 .btn--green::after {
-  background-color: #55c57a; }
+  background-color: #72ec9b; }
 
 .btn--animated {
   animation: MoveToTop 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
-  color: #7ed56f;
+  color: #77d666;
   font-size: 1.6rem;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #7ed56f;
+  border-bottom: 1px solid #77d666;
   padding: 3px;
   position: relative;
   transition: all 0.5s; }
@@ -265,7 +269,7 @@ body {
 .btn-text:hover {
   transform: translateY(-3px);
   box-shadow: 0px 1rem 3rem rgba(0, 0, 0, 0.2);
-  background-color: #7ed56f;
+  background-color: #77d666;
   color: #fff; }
 
 .btn-text:active {
@@ -293,7 +297,7 @@ body {
     .card .card__side--back {
       transform: rotateY(180deg); }
       .card .card__side--back-1 {
-        background-image: linear-gradient(to bottom right, #7ed56f, #28b485); }
+        background-image: linear-gradient(to bottom right, #77d666, #28b485); }
       .card .card__side--back-2 {
         background-image: linear-gradient(to bottom right, #f1c40f, #f39c12); }
       .card .card__side--back-3 {
@@ -308,7 +312,7 @@ body {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .card:hover .card__side--front {
       transform: rotateY(0deg); } }
   .card__picture {
@@ -318,7 +322,7 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture--1 {
-      background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(../img/bun-cua-1.jpg); }
+      background-image: linear-gradient(to bottom right, #77d666, #28b485), url(../img/bun-cua-1.jpg); }
     .card__picture--2 {
       background-image: linear-gradient(to bottom right, #f1c40f, #f39c12), url(../img/thit-nai-1.jpg); }
     .card__picture--3 {
@@ -345,7 +349,7 @@ body {
     padding: 1rem 1.5rem;
     opacity: 0.8; }
     .card__heading-span--1 {
-      background-image: linear-gradient(to bottom right, #7ed56f, #28b485); }
+      background-image: linear-gradient(to bottom right, #77d666, #28b485); }
     .card__heading-span--2 {
       background-image: linear-gradient(to bottom right, #f1c40f, #f39c12); }
     .card__heading-span--3 {
@@ -390,7 +394,7 @@ body {
     font-size: 4.5rem;
     font-weight: 100;
     width: 120%; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       background-color: #fff;
@@ -433,7 +437,7 @@ body {
     border-radius: 2px;
     position: absolute;
     transition: all 0.3s; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .composition__photo {
         position: relative;
         float: left;
@@ -441,21 +445,21 @@ body {
     .composition__photo--p1 {
       top: -2rem;
       left: 0; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
           top: 0;
           transform: scale(1.2); } }
     .composition__photo--p2 {
       top: 2rem;
       left: 40%; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p2 {
           top: -2rem;
           left: 0; } }
     .composition__photo--p3 {
       top: 8rem;
       left: 10%; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p3 {
           top: -2rem;
           left: 0; } }
@@ -479,7 +483,7 @@ body {
   transition: all 0.5s;
   opacity: 0.7;
   backface-visibility: hidden; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .feature-box {
       padding: 1.5rem; } }
   .feature-box__icon {
@@ -487,7 +491,7 @@ body {
     -webkit-background-clip: text;
     display: inline-block;
     color: transparent;
-    background-image: linear-gradient(to right, #7ed56f, #28b485); }
+    background-image: linear-gradient(to right, #77d666, #28b485); }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05);
     opacity: 1; }
@@ -514,7 +518,7 @@ body {
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
-    border-bottom: 3px solid #55c57a; }
+    border-bottom: 3px solid #72ec9b; }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
@@ -532,7 +536,7 @@ body {
 .form__radio-group {
   width: 45%;
   display: inline-block; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__radio-group {
       width: 100%;
       margin-bottom: 1.5rem; } }
@@ -546,7 +550,7 @@ body {
 .form__radio-button {
   width: 3rem;
   height: 3rem;
-  border: 5px solid #55c57a;
+  border: 5px solid #72ec9b;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -562,7 +566,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #55c57a;
+    background-color: #72ec9b;
     opacity: 0; }
 
 .form__radio-input {
@@ -591,7 +595,7 @@ body {
     opacity: 1;
     visibility: visible; }
   .popup__close:link, .popup__close:visited {
-    color: #55c57a;
+    color: #72ec9b;
     position: absolute;
     top: 2.5rem;
     right: 2.5rem;
@@ -619,7 +623,7 @@ body {
     transition: all 0.3s 0.2s; }
   .popup:target .popup__content {
     transform: translate(-50%, -50%) scale(1); }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .popup:target .popup__content {
         transform: translate(-50%, -50%) scale(0.8); } }
   .popup__left {
@@ -634,7 +638,7 @@ body {
     display: block;
     width: 100%; }
     .popup__img-1 {
-      border: 4px solid #55c57a; }
+      border: 4px solid #72ec9b; }
     .popup__img-2 {
       border: 4px solid #f1c40f; }
     .popup__img-3 {
@@ -668,12 +672,12 @@ body {
   padding-left: 9rem;
   font-size: 1.6rem;
   clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       padding: 3rem 3.5rem;
       width: 100%;
-      background-color: #55c57a;
+      background-color: #72ec9b;
       color: #fff; } }
   .story__shape {
     width: 15rem;
@@ -720,7 +724,7 @@ body {
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__logo-box {
         margin-bottom: 6rem; } }
   .footer__logo {
@@ -730,7 +734,7 @@ body {
     border-top: 1px solid #999;
     padding-top: 2rem;
     display: inline-block; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__navigation {
         width: 100%;
         padding: 2rem 0 0 0; } }
@@ -751,7 +755,7 @@ body {
     display: inline-block;
     transition: transform 0.2s; }
   .footer__link:hover, .footer__link:active {
-    color: #55c57a;
+    color: #72ec9b;
     box-shadow: 1.5rem 2rem 4rem rgba(0, 0, 0, 0.2);
     transform: rotate(6deg) scale(1.3); }
   .footer__copyright-icon {
@@ -764,10 +768,10 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem; } }
   .row::after {
@@ -778,11 +782,11 @@ body {
     float: left; }
     .row [class^="col"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col"]:not(:last-child) {
           margin-right: 0;
           margin-bottom: 6rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
@@ -809,10 +813,11 @@ body {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 100%);
       clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 100%); } }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 75em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 75em) {
     .header {
-      background-image: linear-gradient(to bottom right, rgba(0, 242, 96, 0.8), rgba(5, 117, 230, 0.8)), url(../img/background.png); } }
-  @media (max-width: 37.5em) {
+      background-image: linear-gradient(to bottom right, rgba(0, 242, 96, 0.8), rgba(5, 117, 230, 0.8)), url(../img/background.png);
+      height: 75vh; } }
+  @media only screen and (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0%, 100% 85vh, 0 100%); } }
@@ -843,7 +848,7 @@ body {
   box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
   text-align: center;
   cursor: pointer; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__button {
       top: 4rem;
       right: 4rem; } }
@@ -855,10 +860,10 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#7ed56f, #28b485);
+  background-image: radial-gradient(#77d666, #28b485);
   z-index: 1000;
   transition: transform 0.5s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .navigation__background {
       top: 4.1rem;
       right: 4.2rem; } }
@@ -901,7 +906,7 @@ body {
 
 .navigation__link:active, .navigation__link:hover {
   background-position: 100%;
-  color: #55c57a;
+  color: #72ec9b;
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -953,22 +958,24 @@ body {
   background-color: #f7f7f7;
   padding: 20rem 0;
   margin-top: -25vh; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-about {
+      margin-top: -5vh;
+      margin-bottom: 5vh;
       padding: 15rem 0 5rem 0; } }
 
 .section-features {
   padding: 20rem 0;
   margin-top: -30vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/background-2-small.jpg);
+  background-image: linear-gradient(to right, rgba(114, 236, 155, 0.8), rgba(119, 214, 102, 0.8)), url(../img/background-2-small.jpg);
   background-attachment: fixed;
   background-size: cover;
   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%); }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 75em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 75em) {
     .section-features {
-      background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(126, 213, 111, 0.8)), url(../img/background-2.jpg); } }
-  @media (max-width: 56.25em) {
+      background-image: linear-gradient(to right, rgba(119, 214, 102, 0.8), rgba(119, 214, 102, 0.8)), url(../img/background-2.jpg); } }
+  @media only screen and (max-width: 56.25em) {
     .section-features {
       padding: 10rem 0 10rem 0;
       margin-top: -10vh; } }
@@ -977,21 +984,22 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 10rem 0;
   margin-top: -30vh; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-foods {
+      margin-top: -10vh;
       padding: 20rem 0 5rem 0; } }
 
 .section-stories {
   padding: 0.2rem 0 15rem 0;
   position: relative; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-stories {
       padding: 0.2rem 0 10rem 0;
       background-image: radial-gradient(farthest-corner at 50% 50%, rgba(119, 119, 119, 0.7), rgba(27, 27, 27, 0.7)); } }
 
 .section-book {
   padding: 10rem 0;
-  background-image: linear-gradient(to bottom right, #55c57a, #7ed56f); }
+  background-image: linear-gradient(to bottom right, #72ec9b, #77d666); }
 
 .book {
   background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/background-3.jpg);
@@ -999,11 +1007,11 @@ body {
   height: 55rem;
   border-radius: 3px;
   box-shadow: 1rem 1.5rem 4rem rgba(0, 0, 0, 0.3); }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .book {
       background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.8) 70%, transparent 50%), url(../img/background-3.jpg);
       background-size: cover; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .book {
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), transparent), url(../img/background-3.jpg);
       background-size: cover; } }
@@ -1011,10 +1019,10 @@ body {
     padding: 6rem;
     width: 50%;
     position: relative; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .book__form {
         width: 50%; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .book__form {
         width: 100%; } }
     .book__form-button {
